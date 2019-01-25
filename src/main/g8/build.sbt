@@ -3,6 +3,10 @@ organization := "$organization$"
 
 scalaVersion := "$scalaVersion$"
 
+enablePlugins(PlayScala)
+
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "$scalatestVersion$" % Test
+  guice,
+  "org.scalatest"           %% "scalatest"            % "$scalatestVersion$"   % Test,
+  "org.scalatestplus.play"  %% "scalatestplus-play"   % "$scalatestPlayVersion$"   % Test,
 )
